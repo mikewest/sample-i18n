@@ -1,0 +1,19 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{{LANGUAGE_BIDI|yesno:"rtl,ltr"}}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page_title }}</title>
+  </head>
+  <body>
+    <h1>{{ page_title }}</h1>
+    <p>{{ greeting }}</p>
+    <p>{% trans "Well, I must be going." %} {{ farewell }}</p>
+
+    <ul>
+      <li><a href="/intl/en/">English</a></li>
+      <li><a href="/intl/de/">Deutsch</a></li>
+    </ul>
+  </body>
+</html>
